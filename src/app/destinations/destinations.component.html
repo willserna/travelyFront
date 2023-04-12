@@ -1,0 +1,27 @@
+<!-- destinations.component.html -->
+
+<div class="container">
+  <h1>Destinations</h1>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="destinationInput">Destination</label>
+        <input type="text" class="form-control" id="destinationInput" [(ngModel)]="destination">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="categorySelect">Category</label>
+        <select class="form-control" id="categorySelect" [(ngModel)]="category">
+          <option value="">All Categories</option>
+          <option value="beach">Beach</option>
+          <option value="mountain">Mountain</option>
+          <option value="city">City</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="datePicker">Date</label>
+        <input type="date" class="form-control" id="datePicker" [(ngModel)]="date">
+      </div>
+    </div>
+    <button class="btn btn-primary" (click)="searchDestinations()">Search</button>
+  </form>
+</div>

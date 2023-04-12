@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "travely-63cc3"
+  },
+  "targets": {
+    "travely-63cc3": {
+      "hosting": {
+        "travelyFront": [
+          "travely-63cc3"
+        ]
+      }
+    }
+  }
+}

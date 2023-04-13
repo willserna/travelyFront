@@ -1,14 +1,14 @@
 <!-- destinations.component.html -->
-
-<div class="container">
+<app-header></app-header>
+<div class="destinations-container">
   <h1>Destinations</h1>
-  <form>
+  <form class="form-container">
     <div class="form-row">
-      <div class="form-group col-md-4">
+      <div class="destination-input col-md-4">
         <label for="destinationInput">Destination</label>
         <input type="text" class="form-control" id="destinationInput" [(ngModel)]="destination">
       </div>
-      <div class="form-group col-md-4">
+      <div class="category-input col-md-4">
         <label for="categorySelect">Category</label>
         <select class="form-control" id="categorySelect" [(ngModel)]="category">
           <option value="">All Categories</option>
@@ -17,11 +17,14 @@
           <option value="city">City</option>
         </select>
       </div>
-      <div class="form-group col-md-4">
+      <div class="date-input col-md-4">
         <label for="datePicker">Date</label>
         <input type="date" class="form-control" id="datePicker" [(ngModel)]="date">
       </div>
     </div>
-    <button class="btn btn-primary" (click)="searchDestinations()">Search</button>
+    <div class="buttons-section">
+      <button class="btn btn-primary button-search" (click)="searchDestinations()">Search</button>
+      <a href="home" class="btn btn-secondary">Home</a>
+    </div>
   </form>
 </div>

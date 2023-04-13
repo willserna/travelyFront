@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { DestinationsComponent } from './destinations/destinations.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DestinationsComponent } from './destinations/destinations.component';
     CardsComponent,
     RegisterComponent,
     LoginComponent,
-    DestinationsComponent
+    DestinationsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

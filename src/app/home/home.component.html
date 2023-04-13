@@ -1,7 +1,18 @@
 <!-- home.component.html -->
 <app-header></app-header>
-<section class="hero-section">
-  <div class="container">
+<section class="container">
+  <div class="background-image-container">
+    <img src="assets/images/hero-section-image.jpg" alt="Hero Background" class="img-fluid home-image">
+
+  </div>
+  <div class="topleft">
+    <h1 class="display-4">Welcome to Travely</h1>
+    <p class="lead">Explore the world with us and create unforgettable memories</p>
+    <button class="btn btn-primary btn-lg" routerLink="/destinations">Book Your Trip</button>
+  </div>
+</section>
+<!-- <section>
+  <div class="container home-section">
     <div class="row align-items-center">
       <div class="col-lg-6">
         <h1 class="display-4">Welcome to Travely</h1>
@@ -13,14 +24,30 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- home.component.featured destination -->
 <section class="featured-destinations-section">
-  <div class="container">
-    <h2 class="text-center">Featured Destinations</h2>
-    <div class="col mt-4 row mb-4">
-        <app-cards></app-cards>
-    </div>
+  <h2 class="text-center pb-4">Featured Destinations</h2>
+  <div class="w-100 d-flex card-scroll">
+      <app-cards class="cards-content"></app-cards>
   </div>
 </section>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Contact Us</h4>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: info@travely.com</p>
+        <p>Address: 1234 Travel Avenue, Medellin, Colombia</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>&copy; 2023 Your Travel Agency. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
+  </div>
+</footer>
 

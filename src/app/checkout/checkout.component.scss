@@ -1,0 +1,88 @@
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  .form-data {
+    width: 40%;
+  }
+  .customer-data {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0px 2px 7px rgba(150, 149, 147, 0.363);
+    padding: 16px;
+    margin-top: 2rem;
+  }
+
+  .billing-data {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0px 2px 7px rgba(150, 149, 147, 0.363);
+    padding: 16px;
+    margin-top: 2rem;
+  }
+}
+.package-info {
+  width: 30vw;
+  background-color: #f8f9fa;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  width: 20rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  box-shadow: 0px 2px 7px rgba(150, 149, 147, 0.363);
+  padding: 16px;
+  margin-top: 2rem;
+
+  .package-details-card,
+  .package-price-card {
+    background-color: #f8f8f8;
+
+  }
+
+  .card {
+    background-color: #f8f9fa;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 20rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    img {
+      object-fit: contain;
+    }
+
+
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .card-text {
+      color: #666;
+    }
+  }
+
+  .btn-primary {
+    background-color: #f37321;
+    border-color: #f37321;
+
+    &:hover {
+      background-color: #e05d17;
+      border-color: #e05d17;
+    }
+  }
+}

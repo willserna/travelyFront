@@ -1,0 +1,115 @@
+<!-- Checkout Page Component -->
+<header>
+  <app-header class="header-section"></app-header>
+</header>
+<!-- Section for Customer Data Input -->
+<div class="grid-container">
+  <section class="form-data">
+    <form class="customer-data">
+      <h1> User Information </h1>
+      <div class="form-name">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+          [(ngModel)]="formData.userName"
+        />
+      </div>
+      <div class="form-surname">
+        <label for="lastname">Last name</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          class="form-control"
+          [(ngModel)]="formData.userLastName"
+        />
+      </div>
+      <div class="form-idNumber">
+        <label for="idNumber">Passport Number</label>
+        <input
+          type="number"
+          id="idNumber"
+          name="idNumber"
+          class="form-control"
+          [(ngModel)]="formData.idNumber"
+        />
+      </div>
+      <div class="form-email">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          [(ngModel)]="formData.email"
+        />
+      </div>
+    </form>
+    <div class="billing-data">
+      <h1> Payment Information </h1>
+      <form>
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="card-holder">Card Holder Name</label>
+          <input
+            type="text"
+            id="card-holder"
+            name="card-holder"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="card-number">CVV</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            class="form-control"
+          />
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <section class="package-info">
+    <div class="package-details-card">
+      <img
+        [src]="product_purchase.image"
+        alt="destination.title"
+        class="card-img-top"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ product_purchase.packageName }}</h5>
+        <p class="card-text">{{ product_purchase.details }}</p>
+      </div>
+    </div>
+    <!-- Card with Package Price -->
+    <div class="package-price-card">
+      <h4>Total Price: {{ product_purchase.price }}</h4>
+    </div>
+    <a
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      (click)="openConfirmationDialog()"
+      >Continue</a
+    >
+  </section>
+
+<app-popup
+  class="modal"
+  id="dialog"
+  (confirm)="onConfirmation()"
+  (cancel)="onCancellation()"
+></app-popup>

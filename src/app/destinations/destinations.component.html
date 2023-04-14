@@ -1,30 +1,74 @@
 <!-- destinations.component.html -->
-<app-header></app-header>
+<header>
+  <app-header></app-header>
+</header>
 <div class="destinations-container">
   <h1>Destinations</h1>
   <form class="form-container">
     <div class="form-row">
       <div class="destination-input col-md-4">
         <label for="destinationInput">Destination</label>
-        <input type="text" class="form-control" id="destinationInput" [(ngModel)]="destination">
+        <input
+          type="text"
+          class="form-control"
+          id="destinationInput"
+          [(ngModel)]="destination"
+          name="destinationInputField"
+        />
       </div>
       <div class="category-input col-md-4">
         <label for="categorySelect">Category</label>
-        <select class="form-control" id="categorySelect" [(ngModel)]="category">
+        <select
+          class="form-control"
+          id="categorySelect"
+          [(ngModel)]="category"
+          name="categoryInputField"
+        >
           <option value="">All Categories</option>
-          <option value="beach">Beach</option>
-          <option value="mountain">Mountain</option>
-          <option value="city">City</option>
+          <option value="beach">beach</option>
+          <option value="mountain">mountain</option>
+          <option value="city">city</option>
         </select>
       </div>
       <div class="date-input col-md-4">
         <label for="datePicker">Date</label>
-        <input type="date" class="form-control" id="datePicker" [(ngModel)]="date">
+        <input
+          type="date"
+          class="form-control"
+          id="datePicker"
+          [(ngModel)]="date"
+          name="dateInputField"
+        />
       </div>
     </div>
     <div class="buttons-section">
-      <button class="btn btn-primary button-search" (click)="searchDestinations()">Search</button>
+      <button
+        class="btn btn-primary button-search"
+        (click)="searchDestinations()"
+      >
+        Search
+      </button>
       <a href="home" class="btn btn-secondary">Home</a>
     </div>
   </form>
 </div>
+<section *ngIf="showDetails" class="cards-section">
+  <div class="card" *ngFor="let destination of products_found">
+    <img
+      [src]="destination.image"
+      alt="destination.title"
+      class="card-img-top"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ destination.packageName }}</h5>
+      <p class="card-text">{{ destination.description }}</p>
+      <a
+        href="#"
+        class="btn btn-primary"
+        [routerLink]="['/details']"
+        [queryParams]="{ id: destination.id }"
+        >Learn More</a
+      >
+    </div>
+  </div>
+</section>

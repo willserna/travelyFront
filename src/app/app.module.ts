@@ -14,6 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { DetailsComponent } from './details/details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,16 @@ import { DetailsComponent } from './details/details.component';
     RegisterComponent,
     LoginComponent,
     DestinationsComponent,
-    DetailsComponent
+    DetailsComponent,
+    CheckoutComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],

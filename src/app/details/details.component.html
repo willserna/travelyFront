@@ -1,23 +1,39 @@
-
 <!-- Header section -->
 <header>
   <app-header class="header-section"></app-header>
 </header>
 
 <!-- Main content section -->
-<section class="details-container">
-  <div class="container">
-    <h1> Package Name </h1>
-    <p> Package description </p>
-    <p> What's included </p>
-    <p> Package description </p>
 
-    <!-- <h1>{{ packageDetails.name }}</h1>
-    <p>{{ packageDetails.description }}</p>
-    <p>Category: {{ packageDetails.category }}</p>
-    <p>Date: {{ packageDetails.date }}</p> -->
-    <!-- Display other package details as needed -->
+<div class="details-container">
+  <div class="image-container">
+    <img
+      [src]="product_found.image"
+      alt="destination.title"
+      class="details-image"
+    />
   </div>
-</section>
-
-
+  <div class="container">
+    <h1 class="package-name">
+      {{ product_found.packageName }}
+      <span>
+        {{ product_found.location }}
+      </span>
+    </h1>
+    <p>{{ product_found.description }}</p>
+    <p>{{ product_found.details }}</p>
+    <p>Package price: {{ product_found.price }}</p>
+    <!-- <h1>{{ packageDetails.name }}</h1>
+      <p>{{ packageDetails.description }}</p>
+      <p>Category: {{ packageDetails.category }}</p>
+      <p>Date: {{ packageDetails.date }}</p> -->
+    <!-- Display other package details as needed -->
+    <a
+      href="#"
+      class="btn btn-primary"
+      [routerLink]="['/checkout']"
+      [queryParams]="{ id: product_found.id }"
+      >Buy</a
+    >
+  </div>
+</div>

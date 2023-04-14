@@ -1,0 +1,32 @@
+.image-container {
+  height: 20vh;
+  margin-bottom: 3rem;
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.container {
+  height: auto;
+  border-left: 1px solid black;
+  width: 70vw;
+  .package-name {
+    font-size: 60px;
+    span {
+      font-size: 40px;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: #f37321;
+  border-color: #f37321;
+  padding: 0 20px;
+}
+
+.btn-primary:hover {
+  background-color: #e05d17;
+  border-color: #e05d17;
+}
